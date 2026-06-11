@@ -100,7 +100,7 @@ metrics = load_metrics()
 # ==========================================
 # SCALING & CONVERSION
 # ==========================================
-SCALING_FACTOR = 10
+SCALING_FACTOR = 15
 
 def scale_prediction(prediction):
     return prediction / SCALING_FACTOR
@@ -146,7 +146,7 @@ unit_option = st.sidebar.selectbox(
 st.sidebar.markdown("---")
 
 # Input parameters (Malaysia range)
-temp = st.sidebar.slider("🌡️ Temperature (°C)", 22, 35, 28)
+temp = st.sidebar.slider("🌡️ Temperature (°C)", 18, 40, 28)
 humidity = st.sidebar.slider("💧 Humidity (%)", 60, 95, 80)
 hour = st.sidebar.slider("⏰ Hour of Day", 0, 23, 14)
 dayofweek = st.sidebar.selectbox("📅 Day of Week", [0,1,2,3,4,5,6], format_func=lambda x: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][x])
