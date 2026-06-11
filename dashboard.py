@@ -100,7 +100,7 @@ metrics = load_metrics()
 # ==========================================
 # SCALING & CONVERSION
 # ==========================================
-SCALING_FACTOR = 15
+SCALING_FACTOR = 60
 
 def scale_prediction(prediction):
     return prediction / SCALING_FACTOR
